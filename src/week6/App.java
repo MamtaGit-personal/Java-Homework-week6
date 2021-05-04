@@ -37,13 +37,13 @@ public class App {
 		
 		incrementScore(player1, player2);
 		
-		//6. After the loop, compare the final score from each player. 
-		compareScoresOfEachPlayer(player1, player2); 
+		//6. After the loop, compare and print the final score of each player. 
+		compareAndPrintScoresOfEachPlayer(player1, player2); 
 				
-		//7. Print the final score of each player and either “Player 1”, “Player 2”, or “Draw” 
+		//7. Print the final score of the player who won - “Player 1”, “Player 2”, or “Draw” 
 		//depending on which score is higher or if they are both the same.
 		
-		printFinalScoresOfEachPlayer(player1, player2);
+		printFinalResult(player1, player2);
 			
 	} // main()
 	
@@ -139,16 +139,16 @@ public class App {
 		
 	}
 	
-	//6. After the loop, compare the final score from each player. 
-	public static void compareScoresOfEachPlayer(Player player1, Player player2) {	
+	//6. After the loop, compare and print the final score of each player. 
+	public static void compareAndPrintScoresOfEachPlayer(Player player1, Player player2) {	
 		System.out.println("\n****** The FINAL SCORE of each PLAYER after the FLIP game  ******");
 		player1.describe();
 		player2.describe();
 	}
 	
-	//7. Print the final score of each player and either “Player 1”, “Player 2”, or “Draw” 
+	//7. Print the final score of the player who won - “Player 1”, “Player 2”, or “Draw” 
 	//depending on which score is higher or if they are both the same.
-	public static void printFinalScoresOfEachPlayer(Player player1, Player player2) {		
+	public static void printFinalResult(Player player1, Player player2) {		
 		int player1Score = player1.getScore(player1.getname());
 		int player2Score = player2.getScore(player2.getname());
 		

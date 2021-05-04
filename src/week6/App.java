@@ -35,7 +35,7 @@ public class App {
 		//a. Compare the value of each card returned by the two player’s flip methods. Call the 
 		//incrementScore method on the player whose card has the higher value.
 		
-		incrementScore(player1, player2);
+		comparePlayersCardsToIncrementScore(player1, player2);
 		
 		//6. After the loop, compare and print the final score of each player. 
 		compareAndPrintScoresOfEachPlayer(player1, player2); 
@@ -116,7 +116,7 @@ public class App {
 	//5. Using a traditional for loop, iterate 26 times and call the flip method for each player.
 	//a. Compare the value of each card returned by the two player’s flip methods. Call the 
 	//incrementScore method on the player whose card has the higher value.
-	public static void incrementScore(Player player1, Player player2) {		
+	public static void comparePlayersCardsToIncrementScore(Player player1, Player player2) {		
 		Card player1Card;
 		Card player2Card;
 		
@@ -152,7 +152,7 @@ public class App {
 		int player1Score = player1.getScore(player1.getname());
 		int player2Score = player2.getScore(player2.getname());
 		
-		System.out.println("\n****** THIS WAR GAME HAS BEEN WON BY:  ******");
+		System.out.println("\n****** THE WAR GAME HAS BEEN WON BY:  ******");
 		if(player1Score > player2Score) {
 			player1.describe();
 			System.out.println("Number of draw hands(flipped cards with equal value for both players): " + drawCount); 			
